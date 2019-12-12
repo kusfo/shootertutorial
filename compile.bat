@@ -6,6 +6,8 @@ del *.lst
 del *.sym
 echo Borrando rom
 del *.sms
+echo Reexportar graficos
+.\tools\bmp2tile\bmp2tile.exe .\material\nave.png -nomirror  -savetiles .\assets\navetiles.bin -savepalette .\assets\navepalette.bin -exit
 echo Reexportar fondos
 java -jar .\tools\ugt.jar -tiledfile  .\material\level1.tmx -destination .\assets -name level1
 echo Convertir ficheros de graficos a C y compilarlos
